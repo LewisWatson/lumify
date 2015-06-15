@@ -14,7 +14,8 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   #config.vm.box_url="https://atlas.hashicorp.com/nrel/CentOS-6.6-x86_64"
 
-  config.vm.box = "nrel/CentOS-6.6-x86_64"
+  # config.vm.box = "nrel/CentOS-6.6-x86_64"
+  config.vm.box = "dummy"
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -26,40 +27,65 @@ Vagrant.configure(2) do |config|
   #config.vm.synced_folder '.', '/vagrant', nfs: true
 
   # share the Maven repository so to avoid unnecessary downloading of maven dependencies
-  config.vm.synced_folder "~/.m2", "/home/vagrant/.m2", create: true
+  # config.vm.synced_folder "~/.m2", "/home/vagrant/.m2", create: true
 
   # Dev configuration
-  config.vm.define 'dev', primary: true do |dev|
-    config.vm.network :private_network, ip: "192.168.33.10"
-    config.vm.hostname = "lumify-dev"
-    config.vm.provider "virtualbox" do |vb|
-      vb.name = "lumify-dev"
-      vb.memory = 8192
-      vb.cpus = 4
+  config.vm.define 'lumify-dev', primary: true do |dev|
+    # config.vm.network :private_network, ip: "192.168.33.10"
+    # config.vm.hostname = "lumify-dev"
+
+    # https://github.com/rackspace/vagrant-rackspace#centos--rhel-sudo-sorry-you-must-have-a-tty-to-run-sudo
+    config.ssh.pty = true
+
+    config.vm.provider :rackspace do |rs|
+      rs.username = "lewis.watson"
+      rs.api_key  = "9b4721fd1a0a48abb5813973785e36a7"
+      rs.flavor   = /8 GB General Purpose v1/
+      rs.image    = /CentOS/
+      rs.rackspace_region = :lon
+      # rs.metadata = {"key" => "value"}       # optional
     end
+    # config.vm.provider "virtualbox" do |vb|
+    #   vb.name = "lumify-dev"
+    #   vb.memory = 8192
+    #   vb.cpus = 4
+    # end
     config.vm.provision "shell", inline: "sed -i 's/lumify-dev *//g' /etc/hosts"
     config.vm.provision "shell", inline: "echo \"192.168.33.10  lumify-dev\" >> /etc/hosts"
     config.vm.provision "shell", path: "vagrant/scripts/install-lumify-dependencies.sh"
   end
 
   # Demo configuration
-  config.vm.define 'demo' do |demo|
-    config.vm.network :private_network, ip: "192.168.33.12"
+  config.vm.define 'lumify-demo' do |demo|
+    # config.vm.network :private_network, ip: "192.168.33.12"
     # Create a forwarded port mapping which allows access to a specific port
     # within the machine from a port on the host machine. In the example below,
     # accessing "localhost:8080" will access port 80 on the guest machine.
     # config.vm.network "forwarded_port", guest: 80, host: 8080
-    config.vm.network :forwarded_port, :guest => 8080, :host => 8080, :auto_correct => true
-    config.vm.network :forwarded_port, :guest => 8443, :host => 8443, :auto_correct => true
+    # config.vm.network :forwarded_port, :guest => 8080, :host => 8080, :auto_correct => true
+    # config.vm.network :forwarded_port, :guest => 8443, :host => 8443, :auto_correct => true
 
-    config.vm.hostname = "lumify-demo"
-    config.vm.provider "virtualbox" do |vb|
-      vb.name = "lumify-demo"
-      vb.memory = 8192
-      vb.cpus = 4
+    # config.vm.hostname = "lumify-demo"
+
+    # https://github.com/rackspace/vagrant-rackspace#centos--rhel-sudo-sorry-you-must-have-a-tty-to-run-sudo
+    config.ssh.pty = true
+
+    config.vm.provider :rackspace do |rs|
+      rs.username = ENV['RACKSPACE_USERNAME']
+      rs.api_key  = ENV['RACKSPACE_API_KEY']
+      rs.flavor   = /8 GB Performance/
+      rs.image    = /CentOS/
+      rs.rackspace_region = :lon
+      # rs.metadata = {"key" => "value"}       # optional
     end
-    config.vm.network :forwarded_port, :guest => 8080, :host => 8080, :auto_correct => true
-    config.vm.network :forwarded_port, :guest => 8443, :host => 8443, :auto_correct => true
+    # config.vm.provider "virtualbox" do |vb|
+    #   vb.name = "lumify-demo"
+    #   vb.memory = 8192
+    #   vb.cpus = 4
+    # end
+    
+    # config.vm.network :forwarded_port, :guest => 8080, :host => 8080, :auto_correct => true
+    # config.vm.network :forwarded_port, :guest => 8443, :host => 8443, :auto_correct => true
     config.vm.provision "shell", inline: "sed -i 's/lumify-demo *//g' /etc/hosts"
     config.vm.provision "shell", inline: "echo \"192.168.33.12  lumify-demo\" >> /etc/hosts"
     config.vm.provision "shell", path: "vagrant/scripts/install-lumify-dependencies.sh"
