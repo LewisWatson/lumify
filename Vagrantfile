@@ -30,7 +30,7 @@ Vagrant.configure(2) do |config|
   # config.vm.synced_folder "~/.m2", "/home/vagrant/.m2", create: true
 
   # Dev configuration
-  config.vm.define 'lumify-dev', primary: true do |dev|
+  config.vm.define 'dev', primary: true do |dev|
     # config.vm.network :private_network, ip: "192.168.33.10"
     # config.vm.hostname = "lumify-dev"
 
@@ -38,11 +38,13 @@ Vagrant.configure(2) do |config|
     config.ssh.pty = true
 
     config.vm.provider :rackspace do |rs|
-      rs.username = "lewis.watson"
-      rs.api_key  = "9b4721fd1a0a48abb5813973785e36a7"
-      rs.flavor   = /8 GB General Purpose v1/
-      rs.image    = /CentOS/
-      rs.rackspace_region = :lon
+      rs.server_name = "lumify-dev-vagrant"
+      rs.username = ENV['RACKSPACE_USERNAME']
+      rs.api_key  = ENV['RACKSPACE_API_KEY']
+      rs.flavor   = /8 GB General Purpos/
+      rs.image    = /CentOS 6/
+      rs.rackspace_region = ENV['RACKSPACE_REGION']
+      # rs.public_key_path = "~/.ssh/id_rsa.pub"
       # rs.metadata = {"key" => "value"}       # optional
     end
     # config.vm.provider "virtualbox" do |vb|
@@ -56,43 +58,43 @@ Vagrant.configure(2) do |config|
   end
 
   # Demo configuration
-  config.vm.define 'lumify-demo' do |demo|
-    # config.vm.network :private_network, ip: "192.168.33.12"
-    # Create a forwarded port mapping which allows access to a specific port
-    # within the machine from a port on the host machine. In the example below,
-    # accessing "localhost:8080" will access port 80 on the guest machine.
-    # config.vm.network "forwarded_port", guest: 80, host: 8080
-    # config.vm.network :forwarded_port, :guest => 8080, :host => 8080, :auto_correct => true
-    # config.vm.network :forwarded_port, :guest => 8443, :host => 8443, :auto_correct => true
+  # config.vm.define 'demo' do |demo|
+  #   # config.vm.network :private_network, ip: "192.168.33.12"
+  #   # Create a forwarded port mapping which allows access to a specific port
+  #   # within the machine from a port on the host machine. In the example below,
+  #   # accessing "localhost:8080" will access port 80 on the guest machine.
+  #   # config.vm.network "forwarded_port", guest: 80, host: 8080
+  #   # config.vm.network :forwarded_port, :guest => 8080, :host => 8080, :auto_correct => true
+  #   # config.vm.network :forwarded_port, :guest => 8443, :host => 8443, :auto_correct => true
 
-    # config.vm.hostname = "lumify-demo"
+  #   # config.vm.hostname = "lumify-demo"
 
-    # https://github.com/rackspace/vagrant-rackspace#centos--rhel-sudo-sorry-you-must-have-a-tty-to-run-sudo
-    config.ssh.pty = true
+  #   # https://github.com/rackspace/vagrant-rackspace#centos--rhel-sudo-sorry-you-must-have-a-tty-to-run-sudo
+  #   config.ssh.pty = true
 
-    config.vm.provider :rackspace do |rs|
-      rs.username = ENV['RACKSPACE_USERNAME']
-      rs.api_key  = ENV['RACKSPACE_API_KEY']
-      rs.flavor   = /8 GB Performance/
-      rs.image    = /CentOS/
-      rs.rackspace_region = :lon
-      # rs.metadata = {"key" => "value"}       # optional
-    end
-    # config.vm.provider "virtualbox" do |vb|
-    #   vb.name = "lumify-demo"
-    #   vb.memory = 8192
-    #   vb.cpus = 4
-    # end
+  #   config.vm.provider :rackspace do |rs|
+  #     rs.username = ENV['RACKSPACE_USERNAME']
+  #     rs.api_key  = ENV['RACKSPACE_API_KEY']
+  #     rs.flavor   = /8 GB Performance/
+  #     rs.image    = /CentOS 6 (PVHVM)/
+  #     rs.rackspace_region = :lon
+  #     # rs.metadata = {"key" => "value"}       # optional
+  #   end
+  #   # config.vm.provider "virtualbox" do |vb|
+  #   #   vb.name = "lumify-demo"
+  #   #   vb.memory = 8192
+  #   #   vb.cpus = 4
+  #   # end
     
-    # config.vm.network :forwarded_port, :guest => 8080, :host => 8080, :auto_correct => true
-    # config.vm.network :forwarded_port, :guest => 8443, :host => 8443, :auto_correct => true
-    config.vm.provision "shell", inline: "sed -i 's/lumify-demo *//g' /etc/hosts"
-    config.vm.provision "shell", inline: "echo \"192.168.33.12  lumify-demo\" >> /etc/hosts"
-    config.vm.provision "shell", path: "vagrant/scripts/install-lumify-dependencies.sh"
-    config.vm.provision "shell", inline: "cd /vagrant && mvn -P \"grunt unix\",web-war,web-war-with-gpw,web-war-with-ui-plugins clean package -DskipTests", privileged: false
-    config.vm.provision "shell", path: "vagrant/scripts/install-lumify-demo.sh"
-    config.vm.provision "shell", inline: "chkconfig --add jetty && service jetty start"
-  end
+  #   # config.vm.network :forwarded_port, :guest => 8080, :host => 8080, :auto_correct => true
+  #   # config.vm.network :forwarded_port, :guest => 8443, :host => 8443, :auto_correct => true
+  #   config.vm.provision "shell", inline: "sed -i 's/lumify-demo *//g' /etc/hosts"
+  #   config.vm.provision "shell", inline: "echo \"192.168.33.12  lumify-demo\" >> /etc/hosts"
+  #   config.vm.provision "shell", path: "vagrant/scripts/install-lumify-dependencies.sh"
+  #   config.vm.provision "shell", inline: "cd /vagrant && mvn -P \"grunt unix\",web-war,web-war-with-gpw,web-war-with-ui-plugins clean package -DskipTests", privileged: false
+  #   config.vm.provision "shell", path: "vagrant/scripts/install-lumify-demo.sh"
+  #   config.vm.provision "shell", inline: "chkconfig --add jetty && service jetty start"
+  # end
 
   # Integration test configuration
 #  config.vm.define 'itest' do |itest|
