@@ -34,8 +34,8 @@ Vagrant.configure(2) do |config|
     config.vm.hostname = "lumify-dev"
     config.vm.provider "virtualbox" do |vb|
       vb.name = "lumify-dev"
-      vb.memory = 8192
-      vb.cpus = 4
+      vb.memory = 1024
+      vb.cpus = 1
     end
     config.vm.provision "shell", inline: "sed -i 's/lumify-dev *//g' /etc/hosts"
     config.vm.provision "shell", inline: "echo \"192.168.33.10  lumify-dev\" >> /etc/hosts"
@@ -55,8 +55,8 @@ Vagrant.configure(2) do |config|
     config.vm.hostname = "lumify-demo"
     config.vm.provider "virtualbox" do |vb|
       vb.name = "lumify-demo"
-      vb.memory = 8192
-      vb.cpus = 4
+      vb.memory = 1024
+      vb.cpus = 1
     end
     config.vm.network :forwarded_port, :guest => 8080, :host => 8080, :auto_correct => true
     config.vm.network :forwarded_port, :guest => 8443, :host => 8443, :auto_correct => true
