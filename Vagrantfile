@@ -63,7 +63,7 @@ Vagrant.configure(2) do |config|
     config.vm.provision "shell", inline: "sed -i 's/lumify-demo *//g' /etc/hosts"
     config.vm.provision "shell", inline: "echo \"192.168.33.12  lumify-demo\" >> /etc/hosts"
     config.vm.provision "shell", path: "vagrant/scripts/install-lumify-dependencies.sh"
-    config.vm.provision "shell", inline: "cd /vagrant && mvn -P \"grunt unix\",web-war,web-war-with-gpw,web-war-with-ui-plugins clean package -DskipTests", privileged: false
+    config.vm.provision "shell", inline: "cd /vagrant && mvn -P grunt-unix,web-war,web-war-with-gpw,web-war-with-ui-plugins clean package -DskipTests", privileged: false
     config.vm.provision "shell", path: "vagrant/scripts/install-lumify-demo.sh"
     config.vm.provision "shell", inline: "chkconfig --add jetty && service jetty start"
   end

@@ -153,7 +153,7 @@
             </build>
         </profile>
         <profile>
-          <id>grunt windows</id>
+          <id>grunt-windows</id>
           <activation><os><family>windows</family></os></activation>
           <build>
             <plugins>
@@ -180,7 +180,7 @@
           </build>
         </profile>
         <profile>
-          <id>grunt unix</id>
+          <id>grunt-unix</id>
           <activation><os><family>!windows</family></os></activation>
           <build>
             <plugins>
