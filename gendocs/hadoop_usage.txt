@@ -1,0 +1,16 @@
+Use of hadoop
+=====================================================================
+./core/core
+./core/test
+./core/yarn-base
+./datasets/dbpedia
+./datasets/friendster
+./datasets/gdelt
+./datasets/palantir
+./datasets/the-movie-db
+./datasets/wikipedia
+./graph-property-worker/plugins
+./migrations/src
+./tools/assign-image-mr
+./tools/backup-restore
+./tools/reindex-mr
