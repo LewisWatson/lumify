@@ -1,0 +1,1152 @@
+Building Lumify 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify ---
+io.lumify:lumify:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Web 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-group ---
+io.lumify:lumify-web-group:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Web: Client API 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-client-api ---
+io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT
+
+Building Lumify: Core 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-core-group ---
+io.lumify:lumify-core-group:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Core: Core 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-core ---
+io.lumify:lumify-core:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Core: Plugins 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-core-plugins-group ---
+io.lumify:lumify-core-plugins-group:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Core: Plugin: Model: BigTable 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-model-bigtable ---
+io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: Core: Plugin: Model: RabbitMQ 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-model-rabbitmq ---
+io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: Core: Plugin: Model: Secure Graph 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-model-securegraph ---
+io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: Web: Base 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web ---
+io.lumify:lumify-web:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:miniweb:jar:0.5.1:compile
+
+Building Lumify: Core: Plugin: Model: SQL 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-model-sql ---
+io.lumify:lumify-model-sql:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:miniweb:jar:0.5.1:provided
+
+Building Lumify: Core: Plugin: New User Workspace Copy 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-newuser-workspace-copy ---
+io.lumify:lumify-newuser-workspace-copy:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: Core: Plugin: New User Workspace Sharer 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-newuser-workspace-sharer ---
+io.lumify:lumify-newuser-workspace-sharer:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: Web: Server 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-server-group ---
+io.lumify:lumify-web-server-group:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Web: Server: Base 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-server-base ---
+io.lumify:lumify-web-server-base:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:miniweb:jar:0.5.1:compile
+
+Building Lumify: Web: Server: Jetty 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-jetty-server ---
+io.lumify:lumify-jetty-server:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web-server-base:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:miniweb:jar:0.5.1:compile
+
+Building Lumify: Tools 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-tools-group ---
+io.lumify:lumify-tools-group:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Tools: Format 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-tools-format ---
+io.lumify:lumify-tools-format:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Core: Test 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-test ---
+io.lumify:lumify-test:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-jetty-server:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-web-server-base:jar:0.5.0-SNAPSHOT:compile
+|  |  \- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|  |     +- io.lumify:miniweb:jar:0.5.1:compile
++- io.lumify:lumify-tools-format:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  \- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: YARN Base 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-yarn-base ---
+io.lumify:lumify-yarn-base:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+
+
+HERE!!!!
+
+Building Lumify: Data Mapping 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-data-mapping-group ---
+io.lumify:lumify-data-mapping-group:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Data Mapping: 	Core 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-data-mapping-core ---
+io.lumify:lumify-data-mapping-core:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Data Mapping: Plugins 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-data-mapping-plugins-group ---
+io.lumify:lumify-data-mapping-plugins-group:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Data Mapping: Plugin: Column 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-data-mapping-column ---
+io.lumify:lumify-data-mapping-column:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-data-mapping-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Data Mapping: Plugin: CSV 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-data-mapping-csv ---
+io.lumify:lumify-data-mapping-csv:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-data-mapping-column:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-data-mapping-core:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|     |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Datasets 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-datasets-group ---
+io.lumify:lumify-datasets-group:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Datasets: Friendster 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-friendster ---
+io.lumify:lumify-friendster:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:runtime
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Datasets: Wikipedia 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-wikipedia ---
+io.lumify:lumify-wikipedia:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Datasets: Wikipedia: Core 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-wikipedia-core ---
+io.lumify:lumify-wikipedia-core:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Datasets: Wikipedia: MapReduce 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-wikipedia-mr ---
+io.lumify:lumify-wikipedia-mr:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-wikipedia-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  \- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Datasets: Flight Aware 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-flight-aware ---
+io.lumify:lumify-flight-aware:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Datasets: Twitter 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-twitter ---
+io.lumify:lumify-twitter:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Datasets: Twitter: Common 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-twitter-common ---
+io.lumify:lumify-twitter-common:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: Datasets: Twitter: Ingestion 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-twitter-ingestion ---
+io.lumify:lumify-twitter-ingestion:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-twitter-common:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Datasets: Twitter: Graph Property Worker 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-twitter-graph-property-worker ---
+io.lumify:lumify-twitter-graph-property-worker:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-twitter-common:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: Datasets: The World Factbook 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-world-factbook ---
+io.lumify:lumify-world-factbook:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:runtime
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Datasets: GDELT 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gdelt ---
+io.lumify:lumify-gdelt:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Datasets: GDELT: Parser 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gdelt-parser ---
+io.lumify:lumify-gdelt-parser:jar:0.5.0-SNAPSHOT
+
+Building Lumify: Datasets: GDELT: MapReduce 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gdelt-mr ---
+io.lumify:lumify-gdelt-mr:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-gdelt-parser:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Datasets: TheMovieDb 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-the-movie-db ---
+io.lumify:lumify-the-movie-db:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Datasets: TheMovieDb Download 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-the-movie-db-download ---
+io.lumify:lumify-the-movie-db-download:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:runtime
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Datasets: TheMovieDb MR 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-the-movie-db-mr ---
+io.lumify:lumify-the-movie-db-mr:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:runtime
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Datasets: DBpedia 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-dbpedia ---
+io.lumify:lumify-dbpedia:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-wikipedia-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  \- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Datasets: Palantir 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-datasets-palantir ---
+io.lumify:lumify-datasets-palantir:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Datasets: Palantir: Core 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-palantir-core ---
+io.lumify:lumify-palantir-core:jar:0.5.0-SNAPSHOT
+
+Building Lumify: Datasets: Palantir: Data to SequenceFile 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-palantir-data-to-sequence-file ---
+io.lumify:lumify-palantir-data-to-sequence-file:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-palantir-core:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Datasets: Palantir: Import MapReduce 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-palantir-import-mr ---
+io.lumify:lumify-palantir-import-mr:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-palantir-core:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Examples 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-examples-group ---
+io.lumify:lumify-examples-group:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Examples: Food Truck Analytic 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-food-truck ---
+io.lumify:lumify-food-truck:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-twitter-common:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-graph-property-worker-group ---
+io.lumify:lumify-graph-property-worker-group:pom:0.5.0-SNAPSHOT
+
+Building Lumify: GraphPropertyWorker: Plugins 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-graph-property-worker-plugins-group ---
+io.lumify:lumify-graph-property-worker-plugins-group:pom:0.5.0-SNAPSHOT
+
+Building Lumify: GraphPropertyWorker: Plugin: SubRip Parser 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-subrip-parser ---
+io.lumify:lumify-gpw-subrip-parser:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: CCExtractor 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-ccextractor ---
+io.lumify:lumify-gpw-ccextractor:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-gpw-subrip-parser:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker: Plugin: E-Mail Address Extractor 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-email-extractor ---
+io.lumify:lumify-gpw-email-extractor:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Known Entity Extractor 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-known-entity-extractor ---
+io.lumify:lumify-gpw-known-entity-extractor:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: OpenNLP Dictionary Extractor 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-opennlp-dictionary-extractor ---
+io.lumify:lumify-gpw-opennlp-dictionary-extractor:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: OpenNLP Maximum Entropy 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-opennlp-me-extractor ---
+io.lumify:lumify-gpw-opennlp-me-extractor:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Phone Number Extractor 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-phone-number-extractor ---
+io.lumify:lumify-gpw-phone-number-extractor:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Sphinx 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-sphinx ---
+io.lumify:lumify-gpw-sphinx:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: SubRip Transcript 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-subrip-transcript ---
+io.lumify:lumify-gpw-subrip-transcript:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-gpw-subrip-parser:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker: Plugin: Tesseract 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-tesseract ---
+io.lumify:lumify-gpw-tesseract:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-test:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-jetty-server:jar:0.5.0-SNAPSHOT:test
+|  |  +- io.lumify:lumify-web-server-base:jar:0.5.0-SNAPSHOT:test
+|  |  |  \- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:test
+|  |  |     +- io.lumify:miniweb:jar:0.5.1:test
+|  +- io.lumify:lumify-tools-format:jar:0.5.0-SNAPSHOT:test
+|  |  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:test
+|  |  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:test
+|  |  \- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:test
+
+Building Lumify: GraphPropertyWorker: Plugin: Tika Mime Type Mapper 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-tika-mime-type ---
+io.lumify:lumify-gpw-tika-mime-type:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Tika Text Extractor 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-tika-text-extractor ---
+io.lumify:lumify-gpw-tika-text-extractor:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Youtube Transcript 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-youtube-transcript ---
+io.lumify:lumify-gpw-youtube-transcript:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Zip Code Extractor 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-zipcode-extractor ---
+io.lumify:lumify-gpw-zipcode-extractor:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Zip Code Resolver 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-zipcode-resolver ---
+io.lumify:lumify-gpw-zipcode-resolver:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Search Reindex 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-reindex ---
+io.lumify:lumify-gpw-reindex:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Translate Language Detection 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-translate ---
+io.lumify:lumify-gpw-translate:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Translator Bing 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-translator-bing ---
+io.lumify:lumify-gpw-translator-bing:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-gpw-translate:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: OpenCV Object Detector 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-opencv-object-detector ---
+io.lumify:lumify-gpw-opencv-object-detector:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Clavin 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-clavin ---
+io.lumify:lumify-gpw-clavin:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Base 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-graph-property-worker-base ---
+io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Drew Noakes Image Metadata Extractor 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-drewnoakes-image-metadata-extractor ---
+io.lumify:lumify-gpw-drewnoakes-image-metadata-extractor:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker: Plugin: Java Code 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-java-code-ingest ---
+io.lumify:lumify-gpw-java-code-ingest:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Mime Type Ontology Mapper 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-mime-type-ontology-mapper ---
+io.lumify:lumify-gpw-mime-type-ontology-mapper:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Data Mapping Base 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-data-mapping-base ---
+io.lumify:lumify-gpw-data-mapping-base:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-data-mapping-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker: Plugin: CSV 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-csv ---
+io.lumify:lumify-gpw-csv:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-data-mapping-csv:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-data-mapping-column:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-data-mapping-base:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-data-mapping-core:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker: Plugin: RDF 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-rdf ---
+io.lumify:lumify-gpw-rdf:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+
+Building Lumify: GraphPropertyWorker: Plugin: Video MP4 Encoder 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-video-mp4-encoder ---
+io.lumify:lumify-gpw-video-mp4-encoder:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker: Plugin: Video WebM Encoder 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-video-webm-encoder ---
+io.lumify:lumify-gpw-video-webm-encoder:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker: Plugin: Video Audio Extract 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-video-audio-extract ---
+io.lumify:lumify-gpw-video-audio-extract:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker: Plugin: Audio MP4 Encoder 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-audio-mp4-encoder ---
+io.lumify:lumify-gpw-audio-mp4-encoder:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker: Plugin: Audio OGG Encoder 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-audio-ogg-encoder ---
+io.lumify:lumify-gpw-audio-ogg-encoder:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker: Plugin: Video Poster Frame 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-video-poster-frame ---
+io.lumify:lumify-gpw-video-poster-frame:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker: Plugin: Video Frame Extract 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-video-frame-extract ---
+io.lumify:lumify-gpw-video-frame-extract:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker: Plugin: Video Metadata 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-gpw-video-metadata ---
+io.lumify:lumify-gpw-video-metadata:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: GraphPropertyWorker: YARN 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-graph-property-worker-yarn ---
+io.lumify:lumify-graph-property-worker-yarn:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-yarn-base:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Tools: Version Inspector 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-version-inspector ---
+io.lumify:lumify-version-inspector:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Tools: Import 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-tools-import ---
+io.lumify:lumify-tools-import:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Tools: RDF Import 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-tools-rdf-import ---
+io.lumify:lumify-tools-rdf-import:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-rdf:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Tools: User Admin 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-tools-user-admin ---
+io.lumify:lumify-tools-user-admin:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Tools: Requeue 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-tools-requeue ---
+io.lumify:lumify-tools-requeue:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Tools: CLI 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-cli ---
+io.lumify:lumify-cli:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-tools-import:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-tools-rdf-import:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-gpw-rdf:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-tools-user-admin:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-tools-format:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-tools-requeue:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Tools: Re-index MapReduce 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-reindex-mr ---
+io.lumify:lumify-reindex-mr:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Tools: Backup/Restore 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-backup-restore ---
+io.lumify:lumify-backup-restore:jar:0.5.0-SNAPSHOT
+
+Building Lumify: Tools: Assign Image MapReduce 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-assign-image-mr ---
+io.lumify:lumify-assign-image-mr:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Tools: Long Running Process YARN 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-long-running-process-yarn ---
+io.lumify:lumify-long-running-process-yarn:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-yarn-base:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Web: Server: Tomcat 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-tomcat-server ---
+io.lumify:lumify-tomcat-server:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web-server-base:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:miniweb:jar:0.5.1:compile
+
+Building Lumify: Web: War 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-war ---
+io.lumify:lumify-web-war:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:miniweb:jar:0.5.1:compile
+
+Building Lumify: Web: Plugins 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-plugins-group ---
+io.lumify:lumify-web-plugins-group:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Web: Plugin: Social Authentication 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-auth-social ---
+io.lumify:lumify-web-auth-social:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:miniweb:jar:0.5.1:provided
+
+Building Lumify: Web: Plugin: Username-only Authentication 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-auth-username-only ---
+io.lumify:lumify-web-auth-username-only:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:miniweb:jar:0.5.1:compile
+
+Building Lumify: Web: Plugin: Username/Password Authentication 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-auth-username-password ---
+io.lumify:lumify-web-auth-username-password:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:miniweb:jar:0.5.1:compile
+
+Building Lumify: Web: Plugin: X509 Authentication 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-auth-x509 ---
+io.lumify:lumify-web-auth-x509:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:miniweb:jar:0.5.1:provided
+
+Building Lumify: Web: Plugin: x509/LDAP Authentication 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-auth-x509ldap ---
+io.lumify:lumify-web-auth-x509ldap:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:miniweb:jar:0.5.1:provided
+
+Building Lumify: Web: Plugin: Dev Tools 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-dev-tools ---
+io.lumify:lumify-web-dev-tools:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:miniweb:jar:0.5.1:compile
+
+Building Lumify: Web: Plugin: Geo-coder: Bing 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-geocoder-bing ---
+io.lumify:lumify-geocoder-bing:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:miniweb:jar:0.5.1:compile
+
+Building Lumify: Web: Plugin: Google Analytics 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-google-analytics ---
+io.lumify:lumify-google-analytics:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:miniweb:jar:0.5.1:compile
+
+Building Lumify: Web: Plugin: Import/Export Workspaces 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-import-export-workspaces ---
+io.lumify:lumify-web-import-export-workspaces:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:miniweb:jar:0.5.1:compile
+
+Building Lumify: Web: Plugin: OpenNLP Dictionary Extractor 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-opennlp-dictionary-extractor-web ---
+io.lumify:lumify-opennlp-dictionary-extractor-web:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:provided
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:provided
+|  +- io.lumify:miniweb:jar:0.5.1:provided
++- io.lumify:lumify-gpw-opennlp-dictionary-extractor:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Web: Plugin: Terms of Use 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-terms-of-use ---
+io.lumify:lumify-terms-of-use:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:miniweb:jar:0.5.1:compile
+
+Building Lumify: Web: Plugin: Analyst's Notebook Export 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-analysts-notebook-export ---
+io.lumify:lumify-analysts-notebook-export:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:miniweb:jar:0.5.1:compile
+
+Building Lumify: Web: Plugin: Change Password 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-change-password ---
+io.lumify:lumify-web-change-password:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:miniweb:jar:0.5.1:compile
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Web: Plugin: Change Email 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-web-change-email ---
+io.lumify:lumify-web-change-email:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:miniweb:jar:0.5.1:compile
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Web: Client API: Code Generator 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-client-api-codegen ---
+io.lumify:lumify-client-api-codegen:jar:0.5.0-SNAPSHOT
+
+Building Lumify: Dev 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-dev ---
+io.lumify:lumify-dev:pom:0.5.0-SNAPSHOT
+
+Building Lumify: Dev: Jetty Server 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-dev-jetty-server ---
+io.lumify:lumify-dev-jetty-server:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-jetty-server:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-web-server-base:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-opennlp-dictionary-extractor-web:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-web-dev-tools:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:miniweb:jar:0.5.1:compile
++- io.lumify:lumify-web-import-export-workspaces:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-newuser-workspace-sharer:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-newuser-workspace-copy:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-web-auth-username-only:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-web-change-email:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-geocoder-bing:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-terms-of-use:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-analysts-notebook-export:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-mime-type-ontology-mapper:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-tools-import:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-sphinx:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-opencv-object-detector:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-tesseract:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-rdf:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-tika-mime-type:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-tika-text-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-known-entity-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-phone-number-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-csv:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-data-mapping-csv:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-data-mapping-column:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-gpw-data-mapping-base:jar:0.5.0-SNAPSHOT:compile
+|     \- io.lumify:lumify-data-mapping-core:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-opennlp-dictionary-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-opennlp-me-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-email-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-zipcode-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-ccextractor:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-gpw-subrip-parser:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-youtube-transcript:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-subrip-transcript:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-clavin:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-zipcode-resolver:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-translate:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-translator-bing:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-reindex:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-drewnoakes-image-metadata-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-mp4-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-webm-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-audio-extract:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-audio-mp4-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-audio-ogg-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-poster-frame:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-frame-extract:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-metadata:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Dev: GraphPropertyWorker: Local 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-dev-graph-property-worker-local ---
+io.lumify:lumify-dev-graph-property-worker-local:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-mime-type-ontology-mapper:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-tools-import:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-sphinx:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-opencv-object-detector:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-tesseract:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-rdf:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-tika-mime-type:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-tika-text-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-known-entity-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-phone-number-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-csv:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-data-mapping-csv:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-data-mapping-column:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-gpw-data-mapping-base:jar:0.5.0-SNAPSHOT:compile
+|     \- io.lumify:lumify-data-mapping-core:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-opennlp-dictionary-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-opennlp-me-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-email-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-zipcode-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-ccextractor:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-gpw-subrip-parser:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-youtube-transcript:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-subrip-transcript:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-twitter-graph-property-worker:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-twitter-common:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-zipcode-resolver:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-translate:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-translator-bing:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-reindex:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-drewnoakes-image-metadata-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-food-truck:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-mp4-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-webm-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-audio-extract:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-audio-mp4-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-audio-ogg-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-poster-frame:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-frame-extract:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-metadata:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Dev: Tomcat Server 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-dev-tomcat-server ---
+io.lumify:lumify-dev-tomcat-server:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-tomcat-server:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-web-server-base:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-opennlp-dictionary-extractor-web:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-web-dev-tools:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:miniweb:jar:0.5.1:compile
++- io.lumify:lumify-web-import-export-workspaces:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-newuser-workspace-sharer:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-newuser-workspace-copy:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-web-auth-username-only:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-web-change-email:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-geocoder-bing:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-terms-of-use:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-analysts-notebook-export:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-mime-type-ontology-mapper:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-tools-import:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-sphinx:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-opencv-object-detector:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-tesseract:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-rdf:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-tika-mime-type:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-tika-text-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-known-entity-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-phone-number-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-csv:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-data-mapping-csv:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-data-mapping-column:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-gpw-data-mapping-base:jar:0.5.0-SNAPSHOT:compile
+|     \- io.lumify:lumify-data-mapping-core:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-opennlp-dictionary-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-opennlp-me-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-email-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-zipcode-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-ccextractor:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-gpw-subrip-parser:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-youtube-transcript:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-subrip-transcript:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-clavin:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-zipcode-resolver:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-translate:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-translator-bing:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-reindex:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-drewnoakes-image-metadata-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-mp4-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-webm-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-audio-extract:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-audio-mp4-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-audio-ogg-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-poster-frame:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-frame-extract:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-metadata:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Dev: Import 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-dev-import ---
+io.lumify:lumify-dev-import:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-tools-import:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-youtube-transcript:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-subrip-transcript:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-gpw-subrip-parser:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Integration Test 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-integration-test ---
+io.lumify:lumify-integration-test:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-test:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-jetty-server:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-web-server-base:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-tools-format:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
+|  |  \- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-web-dev-tools:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:compile
+|     +- io.lumify:miniweb:jar:0.5.1:compile
++- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-tika-mime-type:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-tika-text-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-phone-number-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-opennlp-dictionary-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-opennlp-me-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-email-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-zipcode-extractor:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-csv:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-data-mapping-csv:jar:0.5.0-SNAPSHOT:compile
+|  |  +- io.lumify:lumify-data-mapping-column:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-gpw-data-mapping-base:jar:0.5.0-SNAPSHOT:compile
+|  |  \- io.lumify:lumify-data-mapping-core:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-rdf:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-ccextractor:jar:0.5.0-SNAPSHOT:compile
+|  \- io.lumify:lumify-gpw-subrip-parser:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-youtube-transcript:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-subrip-transcript:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-mime-type-ontology-mapper:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-opencv-object-detector:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-tesseract:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-clavin:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-zipcode-resolver:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-web-auth-username-only:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-mp4-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-webm-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-audio-extract:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-audio-mp4-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-audio-ogg-encoder:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-poster-frame:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-frame-extract:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-gpw-video-metadata:jar:0.5.0-SNAPSHOT:compile
+
+Building Lumify: Benchmarks 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-benchmark ---
+io.lumify:lumify-benchmark:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-integration-test:test-jar:tests:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-test:jar:0.5.0-SNAPSHOT:test
+|  |  +- io.lumify:lumify-jetty-server:jar:0.5.0-SNAPSHOT:test
+|  |  |  +- io.lumify:lumify-web-server-base:jar:0.5.0-SNAPSHOT:test
+|  |  +- io.lumify:lumify-tools-format:jar:0.5.0-SNAPSHOT:test
+|  |  |  +- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:test
+|  |  |  +- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:test
+|  |  |  \- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-web-dev-tools:jar:0.5.0-SNAPSHOT:test
+|  |  \- io.lumify:lumify-web:jar:0.5.0-SNAPSHOT:test
+|  |     +- io.lumify:miniweb:jar:0.5.1:test
+|  +- io.lumify:lumify-graph-property-worker-base:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-tika-mime-type:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-tika-text-extractor:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-phone-number-extractor:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-opennlp-dictionary-extractor:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-opennlp-me-extractor:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-email-extractor:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-zipcode-extractor:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-csv:jar:0.5.0-SNAPSHOT:test
+|  |  +- io.lumify:lumify-data-mapping-csv:jar:0.5.0-SNAPSHOT:test
+|  |  |  +- io.lumify:lumify-data-mapping-column:jar:0.5.0-SNAPSHOT:test
+|  |  +- io.lumify:lumify-gpw-data-mapping-base:jar:0.5.0-SNAPSHOT:test
+|  |  |  \- io.lumify:lumify-data-mapping-core:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-rdf:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-ccextractor:jar:0.5.0-SNAPSHOT:test
+|  |  \- io.lumify:lumify-gpw-subrip-parser:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-youtube-transcript:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-subrip-transcript:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-mime-type-ontology-mapper:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-opencv-object-detector:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-tesseract:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-clavin:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-zipcode-resolver:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-web-auth-username-only:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-video-mp4-encoder:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-video-webm-encoder:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-video-audio-extract:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-audio-mp4-encoder:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-audio-ogg-encoder:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-video-poster-frame:jar:0.5.0-SNAPSHOT:test
+|  +- io.lumify:lumify-gpw-video-frame-extract:jar:0.5.0-SNAPSHOT:test
+|  \- io.lumify:lumify-gpw-video-metadata:jar:0.5.0-SNAPSHOT:test
+
+Building Lumify: Migrations 0.5.0-SNAPSHOT
+--- maven-dependency-plugin:2.8:tree (default-cli) @ lumify-migrations ---
+io.lumify:lumify-migrations:jar:0.5.0-SNAPSHOT
++- io.lumify:lumify-core:jar:0.5.0-SNAPSHOT:compile
+|  +- io.lumify:lumify-client-api:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-rabbitmq:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-securegraph:jar:0.5.0-SNAPSHOT:compile
++- io.lumify:lumify-model-bigtable:jar:0.5.0-SNAPSHOT:compile

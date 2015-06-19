@@ -1,0 +1,15 @@
+Use of accumulo
+=====================================================================
+./core/core
+./core/plugins
+./core/test
+./datasets/dbpedia
+./datasets/friendster
+./datasets/gdelt
+./datasets/palantir
+./datasets/the-movie-db
+./datasets/wikipedia
+./migrations/src
+./tools/assign-image-mr
+./tools/backup-restore
+./tools/reindex-mr

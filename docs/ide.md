@@ -24,14 +24,14 @@ run/debug configurations for building & running the Lumify Jetty Server.
 * Click the **Apply** button and close the dialog.
 
 ### Configure IntelliJ IDEA Path Variables
-* Select **IntelliJ IDEA -> Preferences** from the menu bar.  The Preferences dialog should disply.
+ Select **IntelliJ IDEA -> Preferences** from the menu bar.  The Preferences dialog should disply.
 * Select **Build, Execution, Deployment -> Path Variables** form the options on the left.
 * Add the **JAVA_HOME** path variable setting the value to the location of the Java 1.7 JDK home directory 
 
 ### Maven Projects Plugin pane
 * Open the Maven Projects pane by selecting the **View -> Tool Windows -> Maven Projects** menu item
 * In the Maven Projects pane select the cog icon, in the upper right corner, and select **Group Modules**
-* Ensure that the **web-war** and **grunt unix** Maven Profiles are selected
+* Ensure that the **web-war** and **grunt-unix** Maven Profiles are selected
 * Ensure that the **Toggle 'Skip Tests' Mode** tool bar button is selected to disable executing unit tests (unless you want to run unit tests)
 
 ![Maven Projects Configuration](img/intillij-mvn-projects-config.png)
