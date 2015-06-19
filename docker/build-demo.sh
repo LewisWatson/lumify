@@ -19,7 +19,7 @@ ssh-keygen -q -N "" -t rsa -f ${KEY_DIR}/ssh_host_rsa_key
 ssh-keygen -q -N "" -t rsa -f ${KEY_DIR}/id_rsa
 
 cd $SRC_DIR
-mvn -P "grunt unix",web-war,web-war-with-gpw,web-war-with-ui-plugins clean package -DskipTests
+mvn -P grunt-unix,web-war,web-war-with-gpw,web-war-with-ui-plugins clean package -DskipTests
 
 cd $DIR
 mkdir -p ${DIR}/demo/.tmp
