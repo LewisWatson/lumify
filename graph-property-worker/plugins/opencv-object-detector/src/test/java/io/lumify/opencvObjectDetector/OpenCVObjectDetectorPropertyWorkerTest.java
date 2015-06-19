@@ -3,6 +3,7 @@ package io.lumify.opencvObjectDetector;
 import io.lumify.core.ingest.ArtifactDetectedObject;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.opencv.objdetect.CascadeClassifier;
@@ -24,7 +25,7 @@ public class OpenCVObjectDetectorPropertyWorkerTest {
         System.out.println(System.getProperty("java.library.path"));
     }
 
-    @Test
+    @Ignore @Test
     public void testObjectDetection() throws Exception {
         OpenCVObjectDetectorPropertyWorker objectDetector = new OpenCVObjectDetectorPropertyWorker();
         objectDetector.loadNativeLibrary();
