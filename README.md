@@ -56,6 +56,8 @@ Connect to the Lumify Web App that is running on the Virtual Machine using eithe
 
 ## Development Quick Start
 
+![Development Overview](docs/img/LumifyDevelopment.png)
+
 ###1. Prerequisites to build from source
 
 The following dependencies must be installed before building Lumify on the development machine.
