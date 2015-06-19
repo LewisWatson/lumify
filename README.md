@@ -56,6 +56,8 @@ Connect to the Lumify Web App that is running on the Virtual Machine using eithe
 
 ## Development Quick Start
 
+![Development Overview](docs/img/LumifyDevelopment.png)
+
 ###1. Prerequisites to build from source
 
 The following dependencies must be installed before building Lumify on the development machine.
@@ -69,6 +71,12 @@ The following dependencies must be installed before building Lumify on the devel
 - [Grunt](http://gruntjs.com/)
 - [VirtualBox](https://www.virtualbox.org/)
 - [Vagrant](https://www.vagrantup.com/)
+- [OpenCV](http://opencv.org/)
+ - You can use the [vagrant installation script](https://github.com/lumifyio/lumify/blob/develop/vagrant/scripts/install-opencv.sh)
+- [Tesseract-ocr](https://code.google.com/p/tesseract-ocr/)
+ - `apt-get install tesseract-cli`
+- [Clavin](https://github.com/lumifyio/lumify/blob/develop/docs/CLAVIN.md)
+- Configure an [ontology](https://github.com/lumifyio/lumify/blob/develop/docs/ontology.md)
 - Chrome or Firefox web browser
 
 ###2. Clone the Lumify repo
@@ -85,6 +93,8 @@ The following commands will start the Lumify Dev Virtual Machine.  If the virtua
 
 	$ cd <working dir>/lumify
 	$ vagrant up dev
+
+note: If a provisioning script fails you may need to connect to the dev box (`vagrant ssh dev`) and manually finish provisioning.
 
 Use the following command to add the lumify-dev IP address to your hosts file.
 
