@@ -42,6 +42,19 @@ Vagrant.configure(2) do |config|
     config.vm.provision "shell", path: "vagrant/scripts/install-lumify-dependencies.sh"
   end
 
+  config.vm.define 'hortonworksdev', primary: true do |hortonworksdev|
+    config.vm.network :private_network, ip: "192.168.33.10"
+    config.vm.hostname = "lumify-dev"
+    config.vm.provider "virtualbox" do |vb|
+      vb.name = "hortonworksdev"
+      vb.memory = 3048
+      vb.cpus = 4
+    end
+    config.vm.provision "shell", inline: "sed -i 's/hortonworksdev *//g' /etc/hosts"
+    config.vm.provision "shell", inline: "echo \"192.168.33.10  lumify-dev\" >> /etc/hosts"
+    config.vm.provision "shell", path: "vagrant/scripts/install-hortonworks-lumify-dependencies.sh"
+  end
+
   # Demo configuration
   config.vm.define 'demo' do |demo|
     config.vm.network :private_network, ip: "192.168.33.12"

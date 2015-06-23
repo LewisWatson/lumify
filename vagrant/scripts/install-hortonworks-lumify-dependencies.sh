@@ -47,7 +47,7 @@ service zookeeper start
 
 # Install Hadoop
 echo "Install Hadoop"
-mkdir -p /opt/hadoop-2.3.0/etc/hadoop
+mkdir -p /opt/hadoop-2.2.0.2.0.6.0-102/etc/hadoop
 echo "export HADOOP_PREFIX=/opt/hadoop" >> /etc/profile.d/hadoop.sh
 echo "export HADOOP_COMMON_HOME=/opt/hadoop" >> /etc/profile.d/hadoop.sh
 echo "export HADOOP_HDFS_HOME=/opt/hadoop" >> /etc/profile.d/hadoop.sh
@@ -57,12 +57,12 @@ echo "export HADOOP_CONF_DIR=/opt/hadoop/etc/hadoop" >> /etc/profile.d/hadoop.sh
 echo "export YARN_CONF_DIR=/opt/hadoop/etc/hadoop" >> /etc/profile.d/hadoop.sh
 echo "export PATH=\$PATH:/opt/hadoop/bin" >> /etc/profile.d/hadoop.sh
 source /etc/profile.d/hadoop.sh
-cp /vagrant/vagrant/config/hadoop/core-site.xml.template /opt/hadoop-2.3.0/etc/hadoop/core-site.xml.template
-cp /vagrant/vagrant/config/hadoop/hadoop-native-64bit.tar.gz /opt/hadoop-2.3.0/hadoop-native-64bit.tar.gz
-/bin/bash /vagrant/vagrant/scripts/install-hadoop.sh
-cp /vagrant/vagrant/config/hadoop/hdfs-site.xml /opt/hadoop-2.3.0/etc/hadoop/hdfs-site.xml
-cp /vagrant/vagrant/config/hadoop/mapred-site.xml /opt/hadoop-2.3.0/etc/hadoop/mapred-site.xml
-cp /vagrant/vagrant/config/hadoop/yarn-site.xml /opt/hadoop-2.3.0/etc/hadoop/yarn-site.xml
+cp /vagrant/vagrant/config/hadoop/core-site.xml.template /opt/hadoop-2.2.0.2.0.6.0-102/etc/hadoop/core-site.xml.template
+# cp /vagrant/vagrant/config/hadoop/hadoop-native-64bit.tar.gz /opt/hadoop-2.2.0.2.0.6.0-102/hadoop-native-64bit.tar.gz
+/bin/bash /vagrant/vagrant/scripts/install-hortonworks-hadoop.sh
+cp /vagrant/vagrant/config/hadoop/hdfs-site.xml /opt/hadoop-2.2.0.2.0.6.0-102/etc/hadoop/hdfs-site.xml
+cp /vagrant/vagrant/config/hadoop/mapred-site.xml /opt/hadoop-2.2.0.2.0.6.0-102/etc/hadoop/mapred-site.xml
+cp /vagrant/vagrant/config/hadoop/yarn-site.xml /opt/hadoop-2.2.0.2.0.6.0-102/etc/hadoop/yarn-site.xml
 cp /vagrant/vagrant/config/hadoop/hadoop_init.sh /etc/init.d/hadoop
 chmod +x /etc/init.d/hadoop
 chkconfig --add hadoop

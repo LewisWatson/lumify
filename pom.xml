@@ -74,7 +74,7 @@
         <elasticsearch.version>1.4.4</elasticsearch.version>
         <evo.inflector.version>1.0.1</evo.inflector.version>
         <guice.version>3.0</guice.version>
-        <hadoop.version>2.5.0</hadoop.version>
+        <hadoop.version>2.6.0.2.2.6.0-2800</hadoop.version>
         <twill.version>0.4.0-incubating</twill.version>
         <hadoop-test.version>1.2.1</hadoop-test.version>
         <httpcomponents.httpclient.version>4.3.1</httpcomponents.httpclient.version>
@@ -189,6 +189,16 @@
             <id>clojars.org</id>
             <url>http://clojars.org/repo</url>
         </repository> -->
+
+        <!-- FOR: Hortonworks -->
+        <repository>
+          <id>com.hortonworks.releases</id>
+          <url>http://repo.hortonworks.com/content/repositories/releases/</url>
+        </repository>
+        <repository>
+          <id>com.hortonworks.jetty-hadoop</id>
+          <url>http://repo.hortonworks.com/content/repositories/jetty-hadoop/</url>
+        </repository>
 
         <!-- FOR: gwtwiki (Wikipedia parser) -->
         <repository>
