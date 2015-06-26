@@ -27,6 +27,7 @@ Vagrant.configure(2) do |config|
 
   # share the Maven repository so to avoid unnecessary downloading of maven dependencies
   config.vm.synced_folder "~/.m2", "/home/vagrant/.m2", create: true
+  config.vm.synced_folder "~/.npm", "/home/vagrant/.npm", create: true
 
   # Dev configuration
   config.vm.define 'dev', primary: true do |dev|
@@ -42,18 +43,48 @@ Vagrant.configure(2) do |config|
     config.vm.provision "shell", path: "vagrant/scripts/install-lumify-dependencies.sh"
   end
 
-  config.vm.define 'hortonworksdev', primary: true do |hortonworksdev|
+  config.vm.define 'hortonworksdev' do |hortonworksdev|
     config.vm.network :private_network, ip: "192.168.33.10"
     config.vm.network :forwarded_port, :guest => 8080, :host => 8080, :auto_correct => true
-    config.vm.hostname = "lumify-dev"
+    config.vm.hostname = "lumify-dev.vagrantup.com"
     config.vm.provider "virtualbox" do |vb|
       vb.name = "hortonworksdev"
-      vb.memory = 3048
+      vb.memory = 5632
       vb.cpus = 4
     end
     config.vm.provision "shell", inline: "sed -i 's/hortonworksdev *//g' /etc/hosts"
-    config.vm.provision "shell", inline: "echo \"192.168.33.10  lumify-dev\" >> /etc/hosts"
+    config.vm.provision "shell", inline: "echo \"192.168.33.10 lumify-dev.vagrantup.com\" >> /etc/hosts"
     config.vm.provision "shell", path: "vagrant/scripts/install-hortonworks-lumify-dependencies.sh"
+  end
+
+  config.vm.define 'hwd2' do |hwd2|
+    config.vm.network :private_network, ip: "192.168.33.10"
+    config.vm.network :forwarded_port, :guest => 8080, :host => 8080, :auto_correct => true
+    config.vm.hostname = "lumify-dev.vagrantup.com"
+    config.vm.provider "virtualbox" do |vb|
+      vb.name = "hwd2"
+      vb.memory = 3632
+      vb.cpus = 4
+    end
+    config.vm.provision "shell", inline: "sed -i 's/hwd2 *//g' /etc/hosts"
+    config.vm.provision "shell", inline: "echo \"192.168.33.10 lumify-dev.vagrantup.com\" >> /etc/hosts"
+    config.vm.provision "shell", path: "vagrant/scripts/hwd2Install.sh"
+  end
+
+
+  config.vm.define 'ambari' do |ambari|
+    # config.vm.network :private_network, ip: "192.168.33.14"
+    config.vm.network :forwarded_port, :guest => 8080, :host => 8080, :auto_correct => true
+    config.vm.hostname = "lumify-ambari"
+    config.vm.provider "virtualbox" do |vb|
+      vb.name = "lumify-ambari"
+      vb.memory = 4048
+      vb.cpus = 4
+    end
+    # config.vm.provision "shell", inline: "sed -i 's/ambari *//g' /etc/hosts"
+    # config.vm.provision "shell", inline: "echo \"192.168.33.14  lumify-ambari\" >> /etc/hosts"
+    config.vm.provision "shell", path: "vagrant/scripts/install-ntp.sh"
+    config.vm.provision "shell", path: "vagrant/scripts/install-ambari-server.sh"
   end
 
   # Demo configuration

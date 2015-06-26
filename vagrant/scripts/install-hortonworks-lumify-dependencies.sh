@@ -4,7 +4,6 @@
 echo "Install yum reppositories"
 cp /vagrant/vagrant/config/yum-repos/elasticsearch.repo /etc/yum.repos.d/elasticsearch.repo
 cp /vagrant/vagrant/config/yum-repos/lumify.repo /etc/yum.repos.d/lumify.repo
-cp /vagrant/vagrant/config/yum-repos/ambari.repo /etc/yum.repos.d/ambari.repo
 
 # Install RPM packages
 echo "Install RPM packages"
@@ -23,6 +22,7 @@ if [ -f /root/.ssh/id_rsa ]; then
 	rm /root/.ssh/id_rsa
 fi
 ssh-keygen -q -N "" -t rsa -f /root/.ssh/id_rsa
+cp /root/.ssh/id_rsa /vagrant/
 cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 
 # Install Java
@@ -38,11 +38,11 @@ echo "export MVN_HOME=/opt/maven" >> /etc/profile.d/maven.sh
 source /etc/profile.d/maven.sh
 /bin/bash /vagrant/vagrant/scripts/install-maven.sh
 
-echo "Install NTP"
-/bin/bash /vagrant/vagrant/scripts/install-ntp.sh
+# echo "Install NTP"
+# /bin/bash /vagrant/vagrant/scripts/install-ntp.sh
 
-echo "Install ambari-server"
-/bin/bash /vagrant/vagrant/scripts/install-ambari-server.sh
+# echo "Install ambari-server"
+# /bin/bash /vagrant/vagrant/scripts/install-ambari-server.sh
 
 # Install ZooKeeper
 # echo "Install ZooKeeper"
