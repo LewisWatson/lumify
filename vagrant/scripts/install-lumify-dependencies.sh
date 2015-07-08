@@ -132,5 +132,3 @@ ldconfig
 /opt/hadoop/bin/hadoop fs -put /vagrant/config/opennlp/* /lumify/config/opennlp/
 /opt/hadoop/bin/hadoop fs -put /vagrant/config/knownEntities/dictionaries/* /lumify/config/knownEntities/dictionaries/
 /opt/hadoop/bin/hadoop fs -chmod -R a+w /lumify/
-
-
