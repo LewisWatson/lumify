@@ -1,7 +1,50 @@
+# Hortonworks sandbox
+## Ports
+These are the port forwarding settings that came from the hortonworks sandbox. Not all will be used by Lumify.
+
+Description        | Host Port | Guest Port
+------------------ | --------- | ----------
+DataNode           | 50075     | 50075
+Falcon             | 1500      | 1500
+HBaseMaster        | 60010     | 60010
+HBaseRegion        | 60030     | 60030
+HS2                | 10000     | 10000
+HS2HTTP            | 10001     | 10001
+JobHistory         | 19888     | 19888
+Knox               | 8443      | 8443
+RM                 | 8050      | 8050
+Solr               | 8993      | 8993
+Spark              | 4040      | 4040
+SparkHistoryServer | 18080     | 18080
+StormUI            | 8744      | 8744
+Tutorials          | 8888      | 8888
+WebHBase           | 60080     | 60080
+WebHcat            | 50111     | 50111
+WebHdfs            | 50070     | 50070
+XASecure           | 6080      | 6080
+YarnATS            | 818       | 818
+YarnRM             | 8088      | 8088
+ambari             | 8080      | 8080
+apache             | 4280      | 4280
+hdfs               | 8020      | 8020
+hue                | 8000      | 8000
+nfs                | 111       | 42111
+nodemanager        | 8040      | 8040
+solr               | 8983      | 8983
+ssh                | 2222      | 22
+zookeeper          | 2181      | 2181
+
+Plus some ports I manually opened when Lumify attempted to connect to them
+
+Description           | Host Port | Guest Port
+--------------------- | --------- | ----------
+hadoop.hdfs.DFSClient | 50075     | 50075
+
+# Accumulo
 You can install accumulo on the sandbox via yum :D `yum install accumulo`. Then configuring `accumulo-env.sh` as follows:
 
 ```shell
-cat /usr/hdp/2.2.4.2-2/accumulo/conf/accumulo-env.sh 
+cat /usr/hdp/2.2.4.2-2/accumulo/conf/accumulo-env.sh
 #! /usr/bin/env bash
 
 # Licensed to the Apache Software Foundation (ASF) under one or more
@@ -75,7 +118,7 @@ I also ran `/usr/hdp/2.2.4.2-2/accumulo/bin/accumulo init --instance-name lumify
 To run Accumulo I adapted [lumify accumulo_init.sh](https://github.com/LewisWatson/lumify/blob/master/vagrant/config/accumulo/accumulo_init.sh) to look like this:
 
 ```shell
-cat accumulo-init.sh 
+cat accumulo-init.sh
 #!/bin/sh
 #
 # accumulo Accumulo Server
@@ -165,8 +208,21 @@ Starting garbage collector on sandbox.hortonworks.com
 Starting tracer on sandbox.hortonworks.com
 ```
 
-### Installing Elasticsearch
+## Accumulo Ports
+Ensure that the following ports are open in the virtualbox machine
 
+description                         | port
+----------------------------------- | -----
+gc.port.client                      | 50091
+monitor.port.client                 | 50095
+monitor.port.log4j                  | 4560
+master.replication.coordinator.port | 10001
+replication.receipt.service.port    | 10002
+trace.port.client                   | 12234
+tserver.port.client                 | 9997
+master.port.client                  | 9999
+
+# Elasticsearch
 I adapted the lumify vagrant installation scripts for elastic search. Copy the contents of [lumify/vagrant/config/elasticsearch](https://github.com/LewisWatson/lumify/tree/master/vagrant/config/elasticsearch) into a directory called `elasticsearch` along with [install-elasticsearch.sh](https://github.com/LewisWatson/lumify/blob/master/vagrant/scripts/install-elasticsearch.sh).
 
 note: remove the JAVA_HOME line from `elasticsearch_init.sh`
@@ -186,8 +242,14 @@ chkconfig --add elasticsearch
 service elasticsearch start
 ```
 
-### Installing RabbitMQ
+## Elasticsearch Ports
 
+Description | Port
+----------- | ----
+http        | 9200
+??          | 9300
+
+# RabbitMQ
 I adapted the lumify vagrant installation scripts for RabbitMQ. Copy the contents of [lumify/vagrant/config/rabbitmq](https://github.com/LewisWatson/lumify/tree/master/vagrant/config/rabbitmq) into a directory called `rabbitmq` along with [install-rabbitmq.sh](https://github.com/LewisWatson/lumify/blob/master/vagrant/scripts/install-rabbitmq.sh).
 
 note: remove the JAVA_HOME line from `rabbitmq_init.sh`
@@ -208,8 +270,14 @@ chkconfig --add rabbitmq
 service rabbitmq start
 ```
 
-### Installing Jetty
+## Ports
 
+Description | Port
+----------- | ----
+RabbitMQ    | 5672
+cluster     | 7672
+
+# Installing Jetty
 I adapted the lumify vagrant installation scripts for Jetty. Copy the contents of [lumify/vagrant/config/jetty](https://github.com/LewisWatson/lumify/tree/master/vagrant/config/jetty) into a directory called `jetty` along with [install-jetty.sh](https://github.com/LewisWatson/lumify/blob/master/vagrant/scripts/install-jetty.sh).
 
 note: remove the JAVA_HOME line as well as `export PATH=$PATH:/opt/jdk/bin` from `jetty_init.sh`
@@ -233,16 +301,21 @@ cp jetty/jetty_init.sh /etc/init.d/jetty
 chmod +x /etc/init.d/jetty
 ```
 
-### Lumify RPM dependencies
+## Ports
 
-#### Add yum repositories
+Descripton | Port
+---------- | ----
+http       | 8080
+https      | 8443
 
-1. Copy [lumify/vagrant/vagrant/config/yum-repos/elasticsearch.repo](https://github.com/LewisWatson/lumify/blob/master/vagrant/config/yum-repos/elasticsearch.repo) to `/etc/yum.repos.d/elasticsearch.repo`
+_note: Both those ports were already open for Knox and Ambari. I didn't have ambari running when I stood up Lumify but I'm not sure what Knox was up to._
 
-2. Copy [lumify/vagrant/vagrant/config/yum-repos/lumify.repo](https://github.com/LewisWatson/lumify/blob/master/vagrant/config/yum-repos/lumify.repo) to `/etc/yum.repos.d/lumify.repo`
+# Lumify RPM dependencies
+## Add yum repositories
+- Copy [lumify/vagrant/vagrant/config/yum-repos/elasticsearch.repo](https://github.com/LewisWatson/lumify/blob/master/vagrant/config/yum-repos/elasticsearch.repo) to `/etc/yum.repos.d/elasticsearch.repo`
+- Copy [lumify/vagrant/vagrant/config/yum-repos/lumify.repo](https://github.com/LewisWatson/lumify/blob/master/vagrant/config/yum-repos/lumify.repo) to `/etc/yum.repos.d/lumify.repo`
 
-#### Install RPM Dependancies
-
+## Install RPM Dependancies
 Create and run `install-npm-packages.sh`
 
 ```shell
@@ -269,24 +342,23 @@ yum install -y lumify-opencv
 #CMU Sphinx
 yum install -y lumify-sphinxbase lumify-pocketsphinx
 ```
+
 based on [/lumify/vagrant/scripts/install-npm-packages.sh](https://github.com/LewisWatson/lumify/blob/master/vagrant/scripts/install-npm-packages.sh).
 
-#### Turn iptables firewall off
+## Turn iptables firewall off
 
 ```shell
 /etc/init.d/iptables stop
 /sbin/chkconfig iptables off
 ```
 
-#### Configure Lumify directories in HDFS
-
+## Configure Lumify directories in HDFS
 Adapted from `configure Lumify directories in HDFS` section of [install-lumify-dependencies.sh](https://github.com/LewisWatson/lumify/blob/master/vagrant/scripts/install-lumify-dependencies.sh))
 
 Copy the following files into a directory called `config`:
-
- * [/lumify/config/opencv/*](https://github.com/LewisWatson/lumify/blob/master/config/opencv)
- * [lumify/config/opennlp/*](https://github.com/LewisWatson/lumify/tree/master/config/opennlp)
- * [/vagrant/config/knownEntities/dictionaries/*](https://github.com/LewisWatson/lumify/tree/master/config/knownEntities/dictionaries)
+- [/lumify/config/opencv/*](https://github.com/LewisWatson/lumify/blob/master/config/opencv)
+- [lumify/config/opennlp/*](https://github.com/LewisWatson/lumify/tree/master/config/opennlp)
+- [/vagrant/config/knownEntities/dictionaries/*](https://github.com/LewisWatson/lumify/tree/master/config/knownEntities/dictionaries)
 
 Then run
 
