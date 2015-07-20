@@ -34,12 +34,6 @@ solr               | 8983      | 8983
 ssh                | 2222      | 22
 zookeeper          | 2181      | 2181
 
-Plus some ports I manually opened when Lumify attempted to connect to them
-
-Description           | Host Port | Guest Port
---------------------- | --------- | ----------
-hadoop.hdfs.DFSClient | 50075     | 50075
-
 # Accumulo
 You can install accumulo on the sandbox via yum :D `yum install accumulo`. Then configuring `accumulo-env.sh` as follows:
 
@@ -247,7 +241,7 @@ service elasticsearch start
 Description | Port
 ----------- | ----
 http        | 9200
-??          | 9300
+tcp         | 9300
 
 # RabbitMQ
 I adapted the lumify vagrant installation scripts for RabbitMQ. Copy the contents of [lumify/vagrant/config/rabbitmq](https://github.com/LewisWatson/lumify/tree/master/vagrant/config/rabbitmq) into a directory called `rabbitmq` along with [install-rabbitmq.sh](https://github.com/LewisWatson/lumify/blob/master/vagrant/scripts/install-rabbitmq.sh).
